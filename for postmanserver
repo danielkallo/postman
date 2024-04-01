@@ -1,0 +1,53 @@
+{
+  "keys": {
+    "shiftEnter": ["ShiftLeft", "Enter"],
+    "shiftRightEnter": ["ShiftRight", "Enter"],
+    "j": ["j"]
+  },
+  "settings": {
+    "clickerEnabledShiftEnter": false,
+    "clickerEnabledShiftRightEnter": false,
+    "jKeyEnabled": false,
+    "shiftDelay": 100
+  },
+  "menu": {
+    "buttons": [
+      {
+        "id": "shiftEnterButton",
+        "text": "ALFA",
+        "event": "toggleClickerShiftEnter"
+      },
+      {
+        "id": "shiftRightEnterButton",
+        "text": "BRAVO",
+        "event": "toggleClickerShiftRightEnter"
+      },
+      {
+        "id": "jKeyButton",
+        "text": "Toggle J Key",
+        "event": "toggleJKey"
+      },
+      {
+        "id": "clickerButton",
+        "text": "Clicker OFF",
+        "event": "toggleMenu"
+      }
+    ]
+  },
+  "externalURL": "https://b464d030-fd0a-4966-a47f-623a2529d59a.mock.pstmn.io",
+  "additionalData": {
+    "preRequestScripts": [
+      "pm.environment.get(\"variable_key\");",
+      "pm.globals.get(\"variable_key\");",
+      "pm.variables.get(\"variable_key\");",
+      "pm.collectionVariables.get(\"variable_key\");",
+      "pm.environment.set(\"variable_key\", \"variable_value\");",
+      "pm.globals.set(\"variable_key\", \"variable_value\");",
+      "pm.collectionVariables.set(\"variable_key\", \"variable_value\");",
+      "pm.environment.unset(\"variable_key\");",
+      "pm.globals.unset(\"variable_key\");",
+      "pm.collectionVariables.unset(\"variable_key\");",
+      "pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) { console.log(response.json()); });"
+    ]
+  }
+}
